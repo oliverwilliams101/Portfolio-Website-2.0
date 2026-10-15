@@ -323,6 +323,15 @@ h1 em {
   position: relative;
   padding-top: 62px;
   min-width: 0;
+  animation: showcase-drift 4s ease-in-out infinite;
+}
+@keyframes showcase-drift {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
 }
 .showcase-note {
   position: absolute;
