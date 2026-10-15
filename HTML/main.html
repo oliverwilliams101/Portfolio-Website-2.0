@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Oliver Williams — Computer Science student at the University of Essex. Explore my work in web development, data visualisation, and game development.">
+  <meta name="theme-color" content="#141814">
+  <title>Oliver Williams — Developer &amp; Curious Mind</title>
+  <link rel="icon" href="../icons/dark_favicon.ico" type="image/x-icon" id="myicon">
+  <script>try{const t=localStorage.getItem('ow-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch{}</script>
+  <link rel="stylesheet" href="../CSS/main.css">
+  <script src="../JS/main.js" defer></script>
+</head>
+<body id="top">
+  <svg class="svg-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="arrow-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+    <symbol id="arrow-down" viewBox="0 0 24 24"><path d="M12 4v16m-6-6 6 6 6-6"/></symbol>
+    <symbol id="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+    <symbol id="moon" viewBox="0 0 24 24"><path d="M20.8 14A9 9 0 0 1 10 3.2 9 9 0 1 0 20.8 14Z"/></symbol>
+    <symbol id="code" viewBox="0 0 24 24"><path d="m7 6-6 6 6 6m10-12 6 6-6 6m-3-15-4 18"/></symbol>
+    <symbol id="chart" viewBox="0 0 24 24"><path d="M4 3v17h17M8 15l4-5 4 2 5-7"/></symbol>
+    <symbol id="game" viewBox="0 0 24 24"><path d="M7 7h10c3 0 4 3 4.5 7s-1 5-3 3l-2-2h-9l-2 2c-2 2-3.5 1-3-3S4 7 7 7Zm0 3v5m-2.5-2.5h5M16 11h.1M19 13h.1"/></symbol>
+    <symbol id="github" viewBox="0 0 24 24"><path d="M9 19c-4 1-4-2-6-2m15 5v-4c0-1-.4-2-1-2 3-.4 5-1.5 5-6 0-1.3-.4-2.5-1.2-3.5.2-1 .1-2-.3-3-1.5 0-3 1-3 1a12 12 0 0 0-7 0s-1.5-1-3-1c-.4 1-.5 2-.3 3A5 5 0 0 0 6 10c0 4.5 2 5.6 5 6-.6.5-1 1.5-1 2v4"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#maincontent">Skip to content</a>
+  <header class="site-header" id="navbar">
+    <nav class="navigation wrap" aria-label="Main navigation">
+      <a class="wordmark" href="#top" aria-label="Oliver Williams, home">ow<span>.</span></a>
+      <div class="nav-links" id="navigation-links"><a class="navlink" href="#portfolio">Work<span>10</span></a><a class="navlink" href="#aboutme">About</a><a class="navlink contact-nav" href="#contact">Let’s talk <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></a></div>
+      <div class="nav-controls"><button class="icon-button theme-toggle" id="changeThemeBut" aria-label="Switch to light theme" hidden><svg class="icon" aria-hidden="true"><use href="#sun"/></svg></button><button class="menu-toggle" aria-label="Open navigation" aria-controls="navigation-links" aria-expanded="false" hidden><span></span><span></span></button></div>
+    </nav>
+  </header>
+  <main id="maincontent">
+    <section class="hero wrap" id="initview" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> A developer. A student. A curious mind.</p>
+        <h1 id="hero-title">Curiosity<br>meets <em>code.</em><span class="hero-spark" aria-hidden="true">✳</span></h1>
+        <p class="hero-intro">I’m <strong>Oliver Williams</strong>, a Computer Science student at the University of Essex. I build useful applications, playful games, and everything in between.</p>
+        <div class="hero-actions"><a class="button primary" href="#portfolio">Explore my work <svg class="icon" aria-hidden="true"><use href="#arrow-down"/></svg></a><a class="text-link" href="https://github.com/oliverwilliams101" target="_blank" rel="noopener noreferrer">Find me on GitHub <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></a></div>
+      </div>
+      <div class="hero-showcase">
+        <div class="showcase-note"><span class="tiny-star" aria-hidden="true">✳</span> Ideas, brought to life.</div>
+        <a class="featured-window" href="#health-tracker" aria-label="Explore the Child health tracker project"><div class="window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>child-health-tracker / dashboard</span><svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></div><div class="featured-image"><img src="../images/childhealthtrackingsoftware.jpeg" alt="Child health tracker dashboard with health charts and child profiles" width="2880" height="1640" fetchpriority="high"></div><div class="window-caption"><span><span class="status-dot"></span> Full-stack, full of purpose.</span><span>Django + JavaScript</span></div></a>
+        <a class="game-preview" href="#tank-attack" aria-label="Explore the Tank Attack project"><img src="../images/tankattack.jpeg" alt="A top-down view of the Tank Attack game" width="1500" height="1500"><span><svg class="icon" aria-hidden="true"><use href="#game"/></svg> A little room for play. <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></span></a>
+        <span class="showcase-coordinate" aria-hidden="true">&lt; made with curiosity /&gt;</span>
+      </div>
+      <div class="hero-bottom"><span>Scroll to get to know my work</span><a href="#portfolio" aria-label="Scroll to projects"><svg class="icon" aria-hidden="true"><use href="#arrow-down"/></svg></a><span>Always learning. Always building.</span></div>
+    </section>
+    <div class="discipline-band"><div class="wrap disciplines"><span><svg class="icon" aria-hidden="true"><use href="#code"/></svg> Web development</span><span class="band-star" aria-hidden="true">✳</span><span><svg class="icon" aria-hidden="true"><use href="#chart"/></svg> Data visualisation</span><span class="band-star" aria-hidden="true">✳</span><span><svg class="icon" aria-hidden="true"><use href="#game"/></svg> Game development</span><span class="band-star" aria-hidden="true">✳</span><span>Thoughtful problem-solving</span></div></div>
+    <section class="work-section wrap" id="portfolio" aria-labelledby="work-title">
+      <div class="section-heading"><div><p class="eyebrow section-eyebrow">01 / The things I’ve made</p><h2 id="work-title">A few ideas.<br><em>A lot of building.</em></h2></div><p>A collection of university projects, personal experiments, and things I just wanted to make.</p></div>
+      <div class="work-toolbar"><div class="filters" role="group" aria-label="Filter projects" hidden><button class="filter active" data-filter="all" aria-pressed="true">All work <span>10</span></button><button class="filter" data-filter="web" aria-pressed="false">Web &amp; apps <span>2</span></button><button class="filter" data-filter="data" aria-pressed="false">Data <span>3</span></button><button class="filter" data-filter="games" aria-pressed="false">Games <span>5</span></button></div><p class="project-count" role="status" aria-live="polite">10 projects, plenty of curiosity</p></div>
+      <div class="project-grid" id="projects"><article class="project-card" id="health-tracker" data-category="web">
+      <div class="project-visual cyan"><img src="../images/childhealthtrackingsoftware.jpeg" alt="Screenshot of Child health tracker" loading="lazy" width="720" height="440"><span class="project-number">01</span></div>
+      <div class="project-copy"><div class="project-meta"><span>Web application</span><span>2024 — 2025</span></div>
+      <h3>Child health tracker</h3><p class="project-intro">A clearer picture of growing up. A full-stack application for tracking children’s health and visualising their progress.</p>
+      <ul class="tags" aria-label="Technologies"><li>Django</li><li>JavaScript</li><li>SQLite</li></ul>
+      <details class="project-details"><summary>Explore project <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></summary>
+      <div class="project-detail-content"><p>A piece of software that can be used to keep track of children’s health. You can create an account which has all the personal information stored inside an SQLite database with the password encrypted. The user can create child profiles and input/modify child’s health data which can generate graphs to show how the child is getting on health wise for each health category. The user can switch to a specific child to be represented on the website. I was responsible for 70%+ of the project which included the graph generation, all the backend, and the home page.</p><dl><div><dt>Created</dt><dd>Oct 2024-April 2025, University team project</dd></div><div><dt>Skills &amp; technologies</dt><dd>HTML, CSS, Django, JavaScript, Charts.js, SQLite, Git, Jira, encryption, exception handling</dd></div><div><dt>Development tools</dt><dd>VSCode/PyCharm</dd></div></dl></div></details></div>
+    </article><article class="project-card" id="tank-attack" data-category="games">
+      <div class="project-visual olive"><img src="../images/tankattack.jpeg" alt="Screenshot of Tank Attack" loading="lazy" width="720" height="440"><span class="project-number">02</span></div>
+      <div class="project-copy"><div class="project-meta"><span>Game development</span><span>2022</span></div>
+      <h3>Tank Attack</h3><p class="project-intro">Nine maps. Five tanks. One mission. A strategy-driven game with enemy AI and A* pathfinding.</p>
+      <ul class="tags" aria-label="Technologies"><li>JavaScript</li><li>p5.js</li><li>A* pathfinding</li></ul>
+      <details class="project-details"><summary>Explore project <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></summary>
+      <div class="project-detail-content"><p>A single player tank game which involves traversing a series of maps while destroying tanks and picking up coins. The player gets the option of 5 tanks on the opening screen UI which all have advantages and disadvantages. Each tank has a main attack which charges, a mini attack which can be used consistently, and a super ability which can be used after attacking enemy tanks enough. The game ends after losing or defeating all 9 maps, the points you earn from collecting coins and defeating enemies is taken off of your time in a ratio of 1 second : 5 points to give a final time.</p><dl><div><dt>Created</dt><dd>Throughout 2022, A level CS project</dd></div><div><dt>Skills &amp; technologies</dt><dd>HTML, CSS, JavaScript, p5JS library, OOP, collision detection, A* pathfinding algorithm, random item generation, tank selection UI, game over screen</dd></div><div><dt>Development tools</dt><dd>Replit</dd></div></dl></div></details></div>
+    </article><article class="project-card" id="temperature-graph" data-category="data">
+      <div class="project-visual sand"><img src="../images/temperaturetimegraph.jpeg" alt="Screenshot of Temperature explorer" loading="lazy" width="720" height="440"><span class="project-number">03</span></div>
+      <div class="project-copy"><div class="project-meta"><span>Data visualisation</span><span>2024</span></div>
+      <h3>Temperature explorer</h3><p class="project-intro">Turning a month of London weather into an interactive story, one data point at a time.</p>
+      <ul class="tags" aria-label="Technologies"><li>Java</li><li>Swing</li><li>File handling</li></ul>
+      <details class="project-details"><summary>Explore project <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></summary>
+      <div class="project-detail-content"><p>An application for generating a line graph of the temperature of 2 places in London across a month on a per hour basis, tapping on the graph prints the temperature and time to the console, and dragging your cursor across the screen draws a line which tells you both the temperatures at the top like Apple’s weather graphs.</p><dl><div><dt>Created</dt><dd>Early 2024, University OOP project</dd></div><div><dt>Skills &amp; technologies</dt><dd>Java, JSwing, OOP, file handling, exception handling</dd></div><div><dt>Development tools</dt><dd>IntelliJ</dd></div></dl></div></details></div>
+    </article><article class="project-card" id="london-heatmap" data-category="data">
+      <div class="project-visual lilac"><img src="../images/heatmap.jpeg" alt="Screenshot of London heatmap" loading="lazy" width="720" height="440"><span class="project-number">04</span></div>
+      <div class="project-copy"><div class="project-meta"><span>Data visualisation</span><span>2024</span></div>
+      <h3>London heatmap</h3><p class="project-intro">Exploring the city through temperature, with an interactive map and colour or greyscale views.</p>
+      <ul class="tags" aria-label="Technologies"><li>Java</li><li>Swing</li><li>Geospatial data</li></ul>
+      <details class="project-details"><summary>Explore project <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></summary>
+      <div class="project-detail-content"><p>An application for generating a heatmap of London, the colour of the map is based on the temperature in those locations, the temperature comes in 2 ranges - cold and hot which is represented as blue and red/orange. Tapping on the heatmap tells you the temperature in that spot as well as the longitude and latitude. You also have the option of changing to grey scale.</p><dl><div><dt>Created</dt><dd>Early 2024, University OOP project</dd></div><div><dt>Skills &amp; technologies</dt><dd>Java, JSwing, OOP, file handling, exception handling</dd></div><div><dt>Development tools</dt><dd>IntelliJ</dd></div></dl></div></details></div>
+    </article><article class="project-card" id="spaceship" data-category="games">
+      <div class="project-visual peach"><img src="../images/spaceshipgame.jpeg" alt="Screenshot of Spaceship" loading="lazy" width="720" height="440"><span class="project-number">05</span></div>
+      <div class="project-copy"><div class="project-meta"><span>Game development</span><span>2024</span></div>
+      <h3>Spaceship</h3><p class="project-intro">A first adventure in Unity. Dodge the walls, find your rhythm, and see how far you can get.</p>
+      <ul class="tags" aria-label="Technologies"><li>Unity</li><li>C#</li><li>Collision detection</li></ul>
+      <details class="project-details"><summary>Explore project <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></summary>
+      <div class="project-detail-content"><p>A simple game which involves dodging the walls that are randomly generated at certain lengths, hitting the walls will push you back, and hitting the orange bar at the back will destroy you. You get points for each wall you pass. This was my first project in Unity.</p><dl><div><dt>Created</dt><dd>Summer 2024, Personal project</dd></div><div><dt>Skills &amp; technologies</dt><dd>Unity, C#, collision detection</dd></div><div><dt>Development tools</dt><dd>Rider</dd></div></dl></div></details></div>
+    </article><article class="project-card" id="grade-generator" data-category="data">
+      <div class="project-visual blue"><img src="../images/gradegraphgenerator.jpeg" alt="Screenshot of Grade graph generator" loading="lazy" width="720" height="440"><span class="project-number">06</span></div>
+      <div class="project-copy"><div class="project-meta"><span>Data visualisation</span><span>2024</span></div>
+      <h3>Grade graph generator</h3><p class="project-intro">From a file full of grades to a set of colour-coded charts that make results easier to understand.</p>
+      <ul class="tags" aria-label="Technologies"><li>Java</li><li>Swing</li><li>Data processing</li></ul>
+      <details class="project-details"><summary>Explore project <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></summary>
+      <div class="project-detail-content"><p>A simple Java application for producing a series of graphs based on grades arranged in a specific format inside a file which is prompted to be entered by the user. The output shows a series of colour coded bars for each grade for each module/subject which represents a grade from 0-100.</p><dl><div><dt>Created</dt><dd>Summer 2024, Personal project</dd></div><div><dt>Skills &amp; technologies</dt><dd>Java, JSwing, OOP, file handling, exception handling</dd></div><div><dt>Development tools</dt><dd>IntelliJ</dd></div></dl></div></details></div>
+    </article><article class="project-card" id="ball-bounce" data-category="games">
+      <div class="project-visual pink"><img src="../images/ballbounce.jpeg" alt="Screenshot of Ball Bounce" loading="lazy" width="720" height="440"><span class="project-number">07</span></div>
+      <div class="project-copy"><div class="project-meta"><span>Game development</span><span>2023</span></div>
+      <h3>Ball Bounce</h3><p class="project-intro">A playful take on Doodle Jump, with random platforms, sound effects, and a ball that keeps climbing.</p>
+      <ul class="tags" aria-label="Technologies"><li>JavaScript</li><li>p5.js</li><li>OOP</li></ul>
+      <details class="project-details"><summary>Explore project <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></summary>
+      <div class="project-detail-content"><p>A doodle jump clone which involves bouncing a ball on platforms to get higher up which increases your score, some platforms break when you try to land on them which causes you to fall through.</p><dl><div><dt>Created</dt><dd>Summer 2023, Personal project</dd></div><div><dt>Skills &amp; technologies</dt><dd>JavaScript, p5JS library, OOP, collision detection, sound effects, random platform generation</dd></div><div><dt>Development tools</dt><dd>Replit</dd></div></dl></div></details></div>
+    </article><article class="project-card" id="blackjack" data-category="games">
+      <div class="project-visual slate"><img src="../images/blackjack.jpeg" alt="Screenshot of Blackjack" loading="lazy" width="720" height="440"><span class="project-number">08</span></div>
+      <div class="project-copy"><div class="project-meta"><span>Game development</span><span>2024</span></div>
+      <h3>Blackjack</h3><p class="project-intro">A classic card game, built for the terminal. My first exploration of C++ and memory management.</p>
+      <ul class="tags" aria-label="Technologies"><li>C++</li><li>OOP</li><li>Memory management</li></ul>
+      <details class="project-details"><summary>Explore project <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></summary>
+      <div class="project-detail-content"><p>A terminal/console game which is based on the card game 21/blackjack. Each person continues to pick up cards until they&#x27;re happy with the total of the cards they have, the closest to 21 wins. This was my first project with C++.</p><dl><div><dt>Created</dt><dd>Summer 2024, Personal project</dd></div><div><dt>Skills &amp; technologies</dt><dd>C++, memory management, exception handling, OOP</dd></div><div><dt>Development tools</dt><dd>CLion</dd></div></dl></div></details></div>
+    </article><article class="project-card" id="pong" data-category="games">
+      <div class="project-visual green"><img src="../images/singleplayerpong.jpeg" alt="Screenshot of Single-player Pong" loading="lazy" width="720" height="440"><span class="project-number">09</span></div>
+      <div class="project-copy"><div class="project-meta"><span>Game development</span><span>2021</span></div>
+      <h3>Single-player Pong</h3><p class="project-intro">Where it started: a bat, a ball, and an increasingly tricky introduction to creative coding.</p>
+      <ul class="tags" aria-label="Technologies"><li>JavaScript</li><li>p5.js</li><li>Collision detection</li></ul>
+      <details class="project-details"><summary>Explore project <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></summary>
+      <div class="project-detail-content"><p>A simple game to prepare myself for learning JavaScript with the library p5JS at college. The game involves a bat which you use to deflect a ball, if the ball hits the ground, you lose a life. Losing all 5 lives ends the game. You score points by deflecting the ball, the more points you gain, the faster the ball travels and the shorter the bat gets.</p><dl><div><dt>Created</dt><dd>Summer 2021, Personal project</dd></div><div><dt>Skills &amp; technologies</dt><dd>JavaScript, p5JS library, OOP, collision detection</dd></div><div><dt>Development tools</dt><dd>OpenProcessing</dd></div></dl></div></details></div>
+    </article><article class="project-card" id="portfolio-site" data-category="web">
+      <div class="project-visual cream"><div class="portfolio-art" aria-hidden="true"><span>&lt;ow /&gt;</span><small>Designed. Developed. Always evolving.</small></div><span class="project-number">10</span></div>
+      <div class="project-copy"><div class="project-meta"><span>Web development</span><span>2025</span></div>
+      <h3>This little corner of the web</h3><p class="project-intro">A portfolio built from scratch to bring my projects together. Responsive, accessible, and a little bit personal.</p>
+      <ul class="tags" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+      <details class="project-details"><summary>Explore project <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></summary>
+      <div class="project-detail-content"><p>I built this portfolio from scratch using HTML, CSS, and JavaScript to bring my work together in one place. It includes responsive layouts, project filtering, accessible project details, and a saved light or dark theme preference. The project content is also available without JavaScript.</p><dl><div><dt>Created</dt><dd>Summer 2025, Personal project</dd></div><div><dt>Skills &amp; technologies</dt><dd>HTML, CSS, tiny bit of JavaScript, Git</dd></div><div><dt>Development tools</dt><dd>VSCode</dd></div></dl></div></details></div>
+    </article></div>
+      <div class="work-footer"><span>More experiments live on GitHub.</span><a class="text-link" href="https://github.com/oliverwilliams101" target="_blank" rel="noopener noreferrer">Take a look <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></a></div>
+    </section>
+    <section class="about-section" id="aboutme" aria-labelledby="about-title"><div class="wrap about-layout"><div class="about-heading"><p class="eyebrow section-eyebrow">02 / The person behind the code</p><h2 id="about-title">Hi, I’m Oliver.<br><em>Nice to meet you.</em></h2><div class="about-monogram" aria-hidden="true">ow<span>✳</span><small>A work in progress.<br>Just like good software.</small></div></div><div class="about-copy"><p class="about-lead">I like figuring out how things work.<br>Even better? Building them myself.</p><p>I’m studying BSc Computer Science at the <strong>University of Essex</strong>, exploring the space between a good idea and something you can actually use.</p><p>In my free time, I make websites, games, and applications that turn everyday tasks into something a little less ordinary. I’m especially interested in interactive tools that make complex ideas easier to understand, including visualising search algorithms.</p><p>JavaScript is my go-to for the web, Java for applications, and C++ or C# when there’s a game to be made. Every project is a chance to learn something new.</p><div class="toolkit"><h3>In my toolkit</h3><ul class="tags"><li>JavaScript</li><li>HTML &amp; CSS</li><li>Java</li><li>Python / Django</li><li>C++</li><li>C# / Unity</li><li>SQLite</li><li>Git</li></ul></div></div></div></section>
+    <section class="contact-section wrap" id="contact" aria-labelledby="contact-title"><p class="eyebrow section-eyebrow">03 / Good things start with a conversation</p><div class="contact-layout"><h2 id="contact-title">Have something<br><em>in mind?</em><span aria-hidden="true">↗</span></h2><div class="contact-copy"><p>A project, an opportunity, or just a shared interest in building things. I’d love to connect.</p><a class="button primary" href="https://www.linkedin.com/in/oliver-williams-044a04315/" target="_blank" rel="noopener noreferrer">Say hello on LinkedIn <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></a><a class="text-link" href="https://github.com/oliverwilliams101" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#github"/></svg> Or find me on GitHub <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></a></div></div></section>
+  </main>
+  <footer class="site-footer wrap"><a class="wordmark" href="#top" aria-label="Oliver Williams, back to top">ow<span>.</span></a><p>Designed &amp; built by Oliver Williams.<span> A little better with every iteration.</span></p><a class="text-link" href="#top">Back to top <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></a></footer>
+  <dialog id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><span class="eyebrow">A closer look</span><button class="icon-button dialog-close" aria-label="Close project details"><svg class="icon" aria-hidden="true"><use href="#close"/></svg></button></div><div id="dialog-content"></div><div class="dialog-footer"><span>More of my work</span><a class="text-link" href="https://github.com/oliverwilliams101" target="_blank" rel="noopener noreferrer">Visit my GitHub <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></a></div></dialog>
+</body>
+</html>
