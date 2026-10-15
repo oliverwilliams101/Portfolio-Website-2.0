@@ -13,8 +13,7 @@
   --orange: #f4c66a;
   --header: rgb(20 24 20 / 94%);
   --project-visual-bg: rgb(255 255 255 / 12%);
-  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --serif: Georgia, "Times New Roman", serif;
+  --sans: Verdana, Geneva, Tahoma, sans-serif;
 }
 :root[data-theme="light"] {
   color-scheme: light;
@@ -97,7 +96,8 @@ ul {
   margin: 0;
 }
 em {
-  font-family: var(--serif);
+  font-family: var(--sans);
+  font-style: normal;
   font-weight: 400;
 }
 .wrap {
@@ -333,8 +333,8 @@ h1 em {
   align-items: center;
   color: var(--muted);
   font-size: 16px;
-  font-family: var(--serif);
-  font-style: italic;
+  font-family: var(--sans);
+  font-style: normal;
   transform: rotate(-5deg);
 }
 .tiny-star {
@@ -595,9 +595,8 @@ h2 em {
 .project-visual {
   position: relative;
   aspect-ratio: 1.5;
-  padding: 0;
+  padding: 8px;
   border-radius: 0;
-  overflow: hidden;
   isolation: isolate;
   background: var(--project-visual-bg);
 }
@@ -606,11 +605,8 @@ h2 em {
   height: 100%;
   object-fit: contain;
   object-position: center;
+  box-shadow: 0 8px 20px #0003;
   border-radius: 0;
-  transition: transform .4s;
-}
-.project-card:hover .project-visual img {
-  transform: scale(1.035);
 }
 .project-copy {
   padding: 18px 16px 16px;
@@ -854,14 +850,24 @@ h2 em {
   padding: 6px 10px;
 }
 .cv-download {
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  min-height: 49px;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface-raised);
+  color: var(--text);
   font: inherit;
   font-weight: 600;
+  line-height: 1.5;
   cursor: not-allowed;
-  opacity: 0.7;
+  transition: transform .2s, box-shadow .2s;
+}
+.cv-download:hover {
+  color: var(--text);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px #0002;
 }
 .contact-section {
   padding-block: 88px 90px;
