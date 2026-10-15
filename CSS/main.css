@@ -600,6 +600,10 @@ h2 em {
   border: 1px solid var(--line);
   border-radius: 7px;
   overflow: hidden;
+  transition: transform .25s ease;
+}
+.project-card:hover {
+  transform: scale(1.02);
 }
 .project-visual {
   position: relative;
