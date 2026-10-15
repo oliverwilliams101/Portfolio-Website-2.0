@@ -8,26 +8,26 @@
   --muted: #a9afa5;
   --faint: #818a7e;
   --line: #343c32;
-  --accent: #d0f59a;
+  --accent: #9aedf5;
   --accent-ink: #192513;
-  --orange: #d8a37d;
+  --orange: #f4c66a;
   --header: rgb(20 24 20 / 94%);
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --serif: Georgia, "Times New Roman", serif;
 }
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg: #f6f5ee;
-  --surface: #eceee4;
-  --surface-raised: #e2e7da;
+  --bg: #eef5f6;
+  --surface: #e4eeee;
+  --surface-raised: #dae4e7;
   --text: #202b20;
   --muted: #5b6557;
-  --faint: #687360;
+  --faint: #606e73;
   --line: #d4d9cc;
-  --accent: #365d2a;
-  --accent-ink: #f5ffe9;
-  --orange: #9c542e;
-  --header: rgb(246 245 238 / 94%);
+  --accent: #3a6983;
+  --accent-ink: #e9f7ff;
+  --orange: #c15f2b;
+  --header: rgba(243, 248, 249, 0.94);
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 110px; }
