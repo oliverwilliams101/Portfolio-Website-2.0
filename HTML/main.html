@@ -30,7 +30,7 @@
       <nav class="navigation wrap" aria-label="Main navigation">
         <a class="wordmark" href="#top" aria-label="Oliver Williams, home">ow<span>.</span></a>
         <div class="nav-links" id="navigation-links">
-          <a class="navlink" href="#portfolio">Portfolio<span>8</span></a>
+          <a class="navlink" href="#portfolio">Portfolio<span>9</span></a>
           <a class="navlink" href="#aboutme">About</a>
           <a class="navlink contact-nav" href="#contact">Contact me<svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></a>
         </div>
@@ -54,12 +54,14 @@
         </div>
         <div class="hero-showcase">
           <div class="showcase-note"><span class="tiny-star" aria-hidden="true">✳</span> Featured projects</div>
-          <a class="featured-window" href="#health-tracker" aria-label="Explore the Child health tracker project">
-            <div class="window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>Child health tracker with dashboard</span><svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></div>
+          <a class="featured-window" href="#search-algorithm-visualiser" aria-label="Explore the Visualising search algorithms web application project">
+            <div class="window-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>Visualising search algorithms</span><svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></div>
             <div class="featured-image">
-              <img src="../images/childhealthtrackingsoftware.jpeg" alt="Child health tracker dashboard with health charts and child profiles" width="2880" height="1640" fetchpriority="high">
+              <video autoplay muted loop playsinline preload="metadata" poster="../images/search-algorithm-visualiser.jpg" aria-label="Looping preview of the search algorithm visualisation application">
+                <source src="../images/search-algorithm-visualiser.mp4" type="video/mp4">
+              </video>
             </div>
-            <div class="window-caption"><span><span class="status-dot"></span> Full-stack web application</span><span>Django + JavaScript</span></div>
+            <div class="window-caption"><span><span class="status-dot"></span> University capstone project</span><span>React + D3.js</span></div>
           </a>
           <a class="game-preview" href="#tank-attack" aria-label="Explore the Tank Attack project">
             <img src="../images/tankattack.jpeg" alt="A top-down view of the Tank Attack game" width="1500" height="1500">
@@ -88,14 +90,49 @@
         </div>
         <div class="work-toolbar">
           <div class="filters" role="group" aria-label="Filter projects" hidden>
-            <button class="filter active" data-filter="all" aria-pressed="true">All work <span>8</span></button>
-            <button class="filter" data-filter="web" aria-pressed="false">Web &amp; apps <span>1</span></button>
+            <button class="filter active" data-filter="all" aria-pressed="true">All work <span>9</span></button>
+            <button class="filter" data-filter="web" aria-pressed="false">Web &amp; apps <span>2</span></button>
             <button class="filter" data-filter="data" aria-pressed="false">Data <span>3</span></button>
             <button class="filter" data-filter="games" aria-pressed="false">Games <span>4</span></button>
           </div>
-          <p class="project-count" role="status" aria-live="polite">8 projects</p>
+          <p class="project-count" role="status" aria-live="polite">9 projects</p>
         </div>
         <div class="project-grid" id="projects">
+          <article class="project-card" id="search-algorithm-visualiser" data-category="web">
+            <div class="project-visual">
+              <img src="../images/search-algorithm-visualiser.jpg" alt="A* search visualisation showing the graph, highlighted route, and algorithm console" loading="lazy" width="1200" height="676">
+            </div>
+            <div class="project-copy">
+              <div class="project-meta"><span>Web application</span><span>2025 — 2026</span></div>
+              <h3>Visualising search algorithms web application</h3>
+              <p class="project-intro">An interactive graph editor for building, saving, and stepping through search algorithm visualisations.</p>
+              <ul class="tags" aria-label="Technologies">
+                <li>React</li>
+                <li>D3.js</li>
+                <li>FastAPI</li>
+              </ul>
+              <details class="project-details">
+                <summary>Explore project <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></summary>
+                <div class="project-detail-content">
+                  <p>This final year university capstone is a web application where users can create graphs and save them to their personal accounts, then run search algorithms on them. It includes DFS, Dijkstra’s, and A*, as well as less common algorithms such as Fringe search. Users can let the visualisation advance automatically or step through it manually, including returning to a previous step. The console updates to show the state of the data structures used by each algorithm.</p>
+                  <dl>
+                    <div>
+                      <dt>Created</dt>
+                      <dd>Oct 2025 – May 2026, University capstone project</dd>
+                    </div>
+                    <div>
+                      <dt>Skills &amp; technologies</dt>
+                      <dd>HTML, CSS, JavaScript, React, SQLModel, FastAPI, REST, D3.js, search algorithms, Git, Python, data visualisation</dd>
+                    </div>
+                    <div>
+                      <dt>Development tools</dt>
+                      <dd>WebStorm</dd>
+                    </div>
+                  </dl>
+                </div>
+              </details>
+            </div>
+          </article>
           <article class="project-card" id="health-tracker" data-category="web">
             <div class="project-visual">
               <img src="../images/childhealthtrackingsoftware.jpeg" alt="Screenshot of Child health tracker" loading="lazy" width="720" height="440">

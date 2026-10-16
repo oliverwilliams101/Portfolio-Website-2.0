@@ -397,7 +397,9 @@ h1 em {
   padding: 14px;
   background: var(--project-visual-bg);
 }
-.featured-image img {
+.featured-image img,
+.featured-image video {
+  display: block;
   width: 100%;
   height: auto;
   border-radius: 3px;
