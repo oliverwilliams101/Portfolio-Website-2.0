@@ -352,6 +352,7 @@ h1 em {
 }
 .featured-window {
   position: relative;
+  z-index: 1;
   display: block;
   border: 1px solid var(--line);
   border-radius: 9px;
@@ -424,6 +425,7 @@ h1 em {
 }
 .game-preview {
   position: absolute;
+  z-index: 2;
   width: 186px;
   bottom: 8px;
   right: -9px;
@@ -458,6 +460,49 @@ h1 em {
 .game-preview .icon {
   width: 13px;
   height: 13px;
+}
+.data-preview {
+  position: absolute;
+  z-index: 2;
+  top: 36px;
+  right: -13px;
+  width: 176px;
+  transform: rotate(6deg);
+  border: 6px solid var(--surface-raised);
+  border-bottom: 0;
+  border-radius: 4px;
+  background: var(--surface-raised);
+  box-shadow: 0 15px 25px #0004;
+  transition: transform .3s;
+}
+.data-preview:hover,
+.data-preview:focus-visible {
+  transform: rotate(2deg) translateY(-5px);
+}
+.data-preview img {
+  width: 100%;
+  height: 92px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1px;
+}
+.data-preview > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding-block: 9px;
+  background: var(--surface-raised);
+  color: var(--text);
+  font-size: 16px;
+}
+.data-preview .icon {
+  width: 13px;
+  height: 13px;
+}
+.hero-showcase > a:hover,
+.hero-showcase > a:focus-visible {
+  z-index: 10;
 }
 .hero-bottom {
   grid-column: 1 / -1;
@@ -1024,6 +1069,14 @@ dialog::backdrop {
   .game-preview img {
     height: 107px;
   }
+  .data-preview {
+    top: 43px;
+    right: -7px;
+    width: 150px;
+  }
+  .data-preview img {
+    height: 86px;
+  }
   .disciplines {
     gap: 14px;
   }
@@ -1322,6 +1375,14 @@ dialog::backdrop {
   .game-preview > span {
     font-size: 16px;
     padding-block: 9px;
+  }
+  .data-preview {
+    top: 40px;
+    right: 2px;
+    width: 145px;
+  }
+  .data-preview img {
+    height: 82px;
   }
   .hero-bottom {
     margin-top: 10px;
