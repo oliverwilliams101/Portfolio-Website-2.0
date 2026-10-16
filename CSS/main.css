@@ -459,14 +459,6 @@ h1 em {
   width: 13px;
   height: 13px;
 }
-.showcase-coordinate {
-  position: absolute;
-  bottom: -30px;
-  left: 23px;
-  font: 16px ui-monospace, monospace;
-  color: var(--faint);
-  transform: rotate(-4deg);
-}
 .hero-bottom {
   grid-column: 1 / -1;
   display: flex;
@@ -529,6 +521,17 @@ h1 em {
   color: var(--faint);
   font-size: 16px;
   letter-spacing: 1.8px;
+}
+.sticky-section-label {
+  position: sticky;
+  top: 92px;
+  z-index: 19;
+  padding-block: 12px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+.sticky-section-label.about-label {
+  background: var(--surface);
 }
 h2 {
   font-size: clamp(36px, 3.8vw, 50px);
@@ -1021,11 +1024,6 @@ dialog::backdrop {
   .game-preview img {
     height: 107px;
   }
-  .showcase-coordinate {
-    bottom: -20px;
-    left: 0;
-    font-size: 16px;
-  }
   .disciplines {
     gap: 14px;
   }
@@ -1056,6 +1054,9 @@ dialog::backdrop {
   }
 }
 @media (max-width: 820px) {
+  .sticky-section-label {
+    top: 76px;
+  }
   .wrap {
     width: calc(100% - 48px);
   }
@@ -1109,9 +1110,6 @@ dialog::backdrop {
     bottom: 41px;
     right: 0;
     width: 145px;
-  }
-  .showcase-coordinate {
-    bottom: -20px;
   }
   .hero-actions {
     gap: 20px;
@@ -1174,6 +1172,9 @@ dialog::backdrop {
   }
 }
 @media (max-width: 600px) {
+  .sticky-section-label {
+    top: 72px;
+  }
   html {
     scroll-padding-top: 90px;
   }
@@ -1321,11 +1322,6 @@ dialog::backdrop {
   .game-preview > span {
     font-size: 16px;
     padding-block: 9px;
-  }
-  .showcase-coordinate {
-    bottom: -12px;
-    left: 6px;
-    font-size: 16px;
   }
   .hero-bottom {
     margin-top: 10px;
