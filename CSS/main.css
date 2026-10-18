@@ -813,6 +813,28 @@ h2 em {
   align-items: start;
   gap: 80px;
 }
+.about-profile-heading {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.about-portrait-placeholder {
+  margin: 0;
+}
+.about-portrait-placeholder img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--project-visual-bg);
+}
+.about-profile-heading .education {
+  margin-bottom: 0;
+}
 .about-monogram {
   position: relative;
   width: 260px;
