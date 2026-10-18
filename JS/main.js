@@ -67,6 +67,80 @@ document.addEventListener('keydown', (event) => {
 const mobileBreakpoint = window.matchMedia('(max-width: 600px)');
 mobileBreakpoint.addEventListener('change', closeMenu);
 
+const showcaseItems = [...document.querySelectorAll('.showcase-item')];
+const nextShowcasePosition = { main: 'bottom', bottom: 'top', top: 'main' };
+const reduceShowcaseMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+let showcaseTransitioning = false;
+
+function syncShowcaseVideo() {
+  showcaseItems.forEach((item) => {
+    const video = item.querySelector('.showcase-video');
+
+    if (!video) {
+      return;
+    }
+
+    if (item.dataset.position === 'main') {
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+      video.currentTime = 0;
+    }
+  });
+}
+
+showcaseItems.forEach((item) => {
+  item.querySelector('.showcase-cycle-button').addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (showcaseTransitioning || item.dataset.position !== 'main') {
+      return;
+    }
+
+    showcaseTransitioning = true;
+    const previousBounds = new Map(
+      showcaseItems.map((showcaseItem) => [showcaseItem, showcaseItem.getBoundingClientRect()]),
+    );
+
+    showcaseItems.forEach((showcaseItem) => {
+      showcaseItem.dataset.position = nextShowcasePosition[showcaseItem.dataset.position];
+    });
+
+    syncShowcaseVideo();
+    const newMain = showcaseItems.find((showcaseItem) => showcaseItem.dataset.position === 'main');
+    newMain.querySelector('.showcase-cycle-button').focus({ preventScroll: true });
+
+    const animations = [];
+
+    if (!reduceShowcaseMotion.matches) {
+      showcaseItems.forEach((showcaseItem) => {
+        const previous = previousBounds.get(showcaseItem);
+        const current = showcaseItem.getBoundingClientRect();
+        const scaleX = previous.width / current.width;
+        const scaleY = previous.height / current.height;
+        const offsetX = previous.left - current.left;
+        const offsetY = previous.top - current.top;
+
+        animations.push(showcaseItem.animate([
+          { transform: `translate(${offsetX}px, ${offsetY}px) scale(${scaleX}, ${scaleY})` },
+          { transform: 'translate(0, 0) scale(1, 1)' },
+        ], {
+          duration: 650,
+          easing: 'cubic-bezier(.2, .75, .25, 1)',
+        }));
+      });
+    }
+
+    Promise.all(animations.map((animation) => animation.finished.catch(() => {})))
+      .then(() => {
+        showcaseTransitioning = false;
+      });
+  });
+});
+
+syncShowcaseVideo();
+
 const filters = document.querySelector('.filters');
 const cards = [...document.querySelectorAll('.project-card')];
 const count = document.querySelector('.project-count');
