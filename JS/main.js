@@ -121,8 +121,30 @@ if (typeof dialog.showModal === 'function') {
       const visual = card.querySelector('.project-visual').cloneNode(true);
       const screenshot = visual.querySelector('img');
 
+      if (card.dataset.videoRatio) {
+        visual.style.aspectRatio = card.dataset.videoRatio;
+      }
+
       if (screenshot) {
         screenshot.loading = 'eager';
+
+        if (card.dataset.video) {
+          const video = document.createElement('video');
+          const source = document.createElement('source');
+
+          video.autoplay = true;
+          video.controls = true;
+          video.loop = true;
+          video.muted = true;
+          video.playsInline = true;
+          video.preload = 'auto';
+          video.poster = screenshot.src;
+          video.setAttribute('aria-label', `Video preview of ${card.querySelector('h3').textContent}`);
+          source.src = card.dataset.video;
+          source.type = 'video/mp4';
+          video.append(source);
+          screenshot.replaceWith(video);
+        }
       }
 
       const description = card.querySelector('.project-detail-content').cloneNode(true);
@@ -134,6 +156,13 @@ if (typeof dialog.showModal === 'function') {
 
   document.querySelector('.dialog-close').addEventListener('click', () => {
     dialog.close();
+  });
+
+  dialog.addEventListener('close', () => {
+    dialogContent.querySelectorAll('video').forEach((video) => {
+      video.pause();
+      video.currentTime = 0;
+    });
   });
 
   // Close only on a complete backdrop click, avoiding accidental closure on a drag.
