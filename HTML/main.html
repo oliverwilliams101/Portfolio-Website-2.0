@@ -88,7 +88,7 @@
                 </a>
               </div>
             </div>
-            <div class="showcase-item" data-position="top" data-project="temperature-graph">
+            <div class="showcase-item video-project" data-position="top" data-project="temperature-graph">
               <div class="showcase-frame">
                 <div class="showcase-window-bar">
                   <span class="window-dots"><i aria-hidden="true"></i><button class="showcase-cycle-button" type="button" aria-label="Cycle featured projects" title="Show the next featured project"></button><i aria-hidden="true"></i></span>
@@ -97,6 +97,9 @@
                 <a class="showcase-card-link" href="#temperature-graph" aria-label="Explore the Temperature explorer project">
                   <div class="showcase-media">
                     <img class="showcase-poster" src="../images/temperaturetimegraph.jpeg" alt="Screenshot of Temperature explorer showing plotted weather data" width="720" height="440">
+                    <video class="showcase-video" autoplay muted loop playsinline preload="metadata" poster="../images/temperaturetimegraph.jpeg" aria-label="Looping preview of Temperature explorer">
+                      <source src="../images/temperature-explorer.mov" type="video/quicktime">
+                    </video>
                   </div>
                   <div class="showcase-main-caption"><span><span class="status-dot"></span> Data visualisation</span><span>Java + Swing</span></div>
                   <span class="showcase-mini-caption"><svg class="icon" aria-hidden="true"><use href="#chart"/></svg> Temperature explorer <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"/></svg></span>
@@ -271,7 +274,7 @@
               </details>
             </div>
           </article>
-          <article class="project-card" id="temperature-graph" data-category="data">
+          <article class="project-card" id="temperature-graph" data-category="data" data-video="../images/temperature-explorer.mov" data-video-type="video/quicktime">
             <div class="project-visual">
               <img src="../images/temperaturetimegraph.jpeg" alt="Screenshot of Temperature explorer" loading="lazy" width="720" height="440">
             </div>
@@ -306,7 +309,7 @@
               </details>
             </div>
           </article>
-          <article class="project-card" id="london-heatmap" data-category="data">
+          <article class="project-card" id="london-heatmap" data-category="data" data-video="../images/london-heatmap.mov" data-video-type="video/quicktime">
             <div class="project-visual">
               <img src="../images/heatmap.jpeg" alt="Screenshot of London heatmap" loading="lazy" width="720" height="440">
             </div>
