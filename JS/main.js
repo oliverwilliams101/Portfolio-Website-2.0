@@ -215,7 +215,7 @@ if (typeof dialog.showModal === 'function') {
           video.poster = screenshot.src;
           video.setAttribute('aria-label', `Video preview of ${card.querySelector('h3').textContent}`);
           source.src = card.dataset.video;
-          source.type = 'video/mp4';
+          source.type = card.dataset.videoType || 'video/mp4';
           video.append(source);
           screenshot.replaceWith(video);
         }

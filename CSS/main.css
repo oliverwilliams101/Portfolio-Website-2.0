@@ -673,12 +673,12 @@ h2 {
 h2 em {
   color: var(--muted);
 }
-.section-heading > p {
-  max-width: 290px;
+.work-section-intro {
+  max-width: 455px;
+  margin-top: 16px;
   font-size: 16px;
   color: var(--muted);
-  padding-bottom: 4px;
-  line-height: 1.8;
+  line-height: 1.85;
 }
 .work-toolbar {
   display: flex;
@@ -1294,10 +1294,6 @@ dialog::backdrop {
   .work-section {
     padding-block: 70px;
   }
-  .section-heading > p {
-    max-width: 230px;
-    font-size: 16px;
-  }
   .work-toolbar {
     margin-top: 30px;
     flex-wrap: wrap;
@@ -1538,10 +1534,8 @@ dialog::backdrop {
     font-size: 37px;
     margin-top: 19px;
   }
-  .section-heading > p {
+  .work-section-intro {
     margin-top: 20px;
-    max-width: 320px;
-    font-size: 16px;
   }
   .work-toolbar {
     margin-top: 24px;
