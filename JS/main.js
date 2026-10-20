@@ -16,17 +16,20 @@ function updateFavicon(light) {
 }
 
 function syncTheme() {
-  const light = root.dataset.theme === 'light';
-  themeButton.setAttribute('aria-label', `Switch to ${light ? 'dark' : 'light'} theme`);
-  themeIcon.setAttribute('href', light ? '#moon' : '#sun');
+  const theme = root.dataset.theme;
+  const nextTheme = { dark: 'light', light: 'contrast', contrast: 'dark' }[theme] || 'light';
+  const nextIcon = { dark: '#sun', light: '#contrast', contrast: '#moon' }[theme] || '#sun';
+  themeButton.setAttribute('aria-label', `Switch to ${nextTheme === 'contrast' ? 'high contrast' : nextTheme} theme`);
+  themeIcon.setAttribute('href', nextIcon);
+  const light = theme === 'light';
   updateFavicon(light);
-  themeColor.content = light ? '#f6f5ee' : '#141814';
+  themeColor.content = light ? '#f6f5ee' : theme === 'contrast' ? '#000000' : '#141814';
 }
 
 syncTheme();
 themeButton.hidden = false;
 themeButton.addEventListener('click', () => {
-  root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light';
+  root.dataset.theme = { dark: 'light', light: 'contrast', contrast: 'dark' }[root.dataset.theme] || 'light';
   syncTheme();
 
   try {

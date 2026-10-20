@@ -30,6 +30,21 @@
   --header: rgba(243, 248, 249, 0.94);
   --project-visual-bg: rgb(0 0 0 / 10%);
 }
+:root[data-theme="contrast"] {
+  color-scheme: dark;
+  --bg: #000;
+  --surface: #080808;
+  --surface-raised: #151515;
+  --text: #fff;
+  --muted: #f1f1f1;
+  --faint: #dedede;
+  --line: #bdbdbd;
+  --accent: #00f5d4;
+  --accent-ink: #001a16;
+  --orange: #ffe100;
+  --header: rgb(0 0 0 / 96%);
+  --project-visual-bg: rgb(255 255 255 / 16%);
+}
 *, *::before, *::after {
   box-sizing: border-box;
 }
