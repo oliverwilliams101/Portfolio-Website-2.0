@@ -4,14 +4,22 @@
 const root = document.documentElement;
 const themeButton = document.querySelector('#changeThemeBut');
 const themeIcon = themeButton.querySelector('use');
-const favicon = document.querySelector('#myicon');
+let favicon = document.querySelector('#myicon');
 const themeColor = document.querySelector('meta[name="theme-color"]');
+
+function updateFavicon(light) {
+  const nextFavicon = favicon.cloneNode();
+  const theme = light ? 'light' : 'dark';
+  nextFavicon.href = `../icons/${theme}_favicon.svg?theme=${theme}`;
+  favicon.replaceWith(nextFavicon);
+  favicon = nextFavicon;
+}
 
 function syncTheme() {
   const light = root.dataset.theme === 'light';
   themeButton.setAttribute('aria-label', `Switch to ${light ? 'dark' : 'light'} theme`);
   themeIcon.setAttribute('href', light ? '#moon' : '#sun');
-  favicon.href = light ? '../icons/light_favicon.ico' : '../icons/dark_favicon.ico';
+  updateFavicon(light);
   themeColor.content = light ? '#f6f5ee' : '#141814';
 }
 
