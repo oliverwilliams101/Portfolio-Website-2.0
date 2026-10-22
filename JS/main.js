@@ -39,6 +39,37 @@ themeButton.addEventListener('click', () => {
   }
 });
 
+const typewriterWords = [...document.querySelectorAll('[data-typewriter-word]')];
+if (typewriterWords.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const titleWords = typewriterWords.map((word) => word.textContent);
+
+  typewriterWords.forEach((word) => {
+    word.textContent = '';
+  });
+
+  function typeTitleWord(index) {
+    const word = typewriterWords[index];
+    const text = titleWords[index];
+    let character = 0;
+    word.classList.add('typewriter-active');
+
+    function typeNextCharacter() {
+      if (character < text.length) {
+        word.textContent += text[character];
+        character += 1;
+        window.setTimeout(typeNextCharacter, 70);
+      } else if (index < typewriterWords.length - 1) {
+        word.classList.remove('typewriter-active');
+        window.setTimeout(() => typeTitleWord(index + 1), 220);
+      }
+    }
+
+    typeNextCharacter();
+  }
+
+  window.setTimeout(() => typeTitleWord(0), 250);
+}
+
 const menuButton = document.querySelector('.menu-toggle');
 const menu = document.querySelector('#navigation-links');
 const navigation = document.querySelector('.navigation');

@@ -262,9 +262,26 @@ h1 {
   line-height: 1.04;
   letter-spacing: -1px;
 }
+#hero-title {
+  min-height: 3.12em;
+}
 h1 em {
   color: var(--accent);
   letter-spacing: -1px;
+}
+[data-typewriter-word].typewriter-active::after {
+  content: "";
+  display: inline-block;
+  height: .82em;
+  margin-left: 3px;
+  border-right: 2px solid var(--accent);
+  vertical-align: -.04em;
+  animation: typewriter-caret-blink .8s step-end infinite;
+}
+@keyframes typewriter-caret-blink {
+  50% {
+    opacity: 0;
+  }
 }
 .hero-spark {
   display: inline-block;
@@ -568,11 +585,17 @@ h1 em {
 .showcase-item[data-position="top"] .showcase-media img,
 .showcase-item[data-position="bottom"] .showcase-media img {
   width: 100%;
-  height: 140px;
   object-fit: cover;
   border-radius: 0;
 }
-.showcase-item[data-position="top"] .showcase-media img {
+.showcase-item[data-position="top"] .showcase-media,
+.showcase-item[data-position="bottom"] .showcase-media {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 140px;
+  padding: 0;
+}
+.showcase-item[data-position="top"] .showcase-media {
   height: 106px;
 }
 .showcase-item[data-position="bottom"] .showcase-media img[src*="tankattack"] {
@@ -1191,7 +1214,7 @@ dialog::backdrop {
     bottom: 25px;
     width: 192px;
   }
-  .showcase-item[data-position="bottom"] .showcase-media img {
+  .showcase-item[data-position="bottom"] .showcase-media {
     height: 128px;
   }
   .showcase-item[data-position="top"] {
@@ -1199,7 +1222,7 @@ dialog::backdrop {
     right: -7px;
     width: 178px;
   }
-  .showcase-item[data-position="top"] .showcase-media img {
+  .showcase-item[data-position="top"] .showcase-media {
     height: 102px;
   }
   .disciplines {
@@ -1283,16 +1306,13 @@ dialog::backdrop {
     right: 0;
     width: 178px;
   }
+  .showcase-item[data-position="bottom"] .showcase-media {
+    height: 114px;
+  }
   .showcase-item[data-position="top"] {
     top: 8px;
     right: 0;
     width: 168px;
-  }
-  .showcase-item[data-position="bottom"] .showcase-media img {
-    height: 114px;
-  }
-  .showcase-item[data-position="top"] .showcase-media img {
-    height: 98px;
   }
   .hero-actions {
     gap: 20px;
@@ -1477,7 +1497,7 @@ dialog::backdrop {
     font-size: 16px;
   }
   .showcase-stage {
-    min-height: 255px;
+    min-height: 375px;
     aspect-ratio: auto;
   }
   .showcase-window-bar {
@@ -1502,11 +1522,10 @@ dialog::backdrop {
     right: 2px;
     width: 168px;
   }
-  .showcase-item[data-position="bottom"] .showcase-media img {
-    height: 114px;
-  }
-  .showcase-item[data-position="top"] .showcase-media img {
-    height: 98px;
+  .showcase-item[data-position="top"] .showcase-media,
+  .showcase-item[data-position="bottom"] .showcase-media {
+    height: auto;
+    aspect-ratio: 1.4;
   }
   .showcase-mini-caption {
     padding-block: 9px;
