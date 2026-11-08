@@ -1,55 +1,55 @@
 name: Deploy to IONOS
 
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: read
 
 concurrency:
-  group: ionos-production
-  cancel-in-progress: false
+  group: ionos-production
+  cancel-in-progress: false
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout main
-        uses: actions/checkout@v4
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
 
-      - name: Install SFTP client
-        run: sudo apt-get update && sudo apt-get install -y lftp
+      - name: Install SFTP client
+        run: sudo apt-get update && sudo apt-get install -y lftp
 
-      - name: Configure SSH verification
-        env:
-          HOST_KEY: ${{ secrets.IONOS_HOST_KEY }}
-        run: |
-          mkdir -p ~/.ssh
-          chmod 700 ~/.ssh
-          printf '%s\n' "$HOST_KEY" > ~/.ssh/known_hosts
-          chmod 600 ~/.ssh/known_hosts
+      - name: Configure SSH verification
+        env:
+          HOST_KEY: ${{ secrets.IONOS_HOST_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$HOST_KEY" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
 
-      - name: Deploy website
-        env:
-          HOST: ${{ secrets.IONOS_HOST }}
-          USER: ${{ secrets.IONOS_USER }}
-          PASSWORD: ${{ secrets.IONOS_PASSWORD }}
-        run: |
-          export LFTP_PASSWORD="$PASSWORD"
+      - name: Deploy website
+        env:
+          HOST: ${{ secrets.IONOS_HOST }}
+          USER: ${{ secrets.IONOS_USER }}
+          PASSWORD: ${{ secrets.IONOS_PASSWORD }}
+        run: |
+          export LFTP_PASSWORD="$PASSWORD"
 
-          lftp -u "$USER" --env-password \
-            "sftp://$HOST:22" <<'EOF'
-          set cmd:fail-exit yes
-          set sftp:connect-program "ssh -a -x -o StrictHostKeyChecking=yes"
-          mirror --reverse --verbose \
-            --exclude-glob .git/ \
-            --exclude-glob .github/ \
-            --exclude-glob .gitignore \
-            --exclude-glob README.md \
-            ./ /portfolio/
-          bye
-          EOF
+          lftp -u "$USER" --env-password \
+            "sftp://$HOST:22" <<'EOF'
+          set cmd:fail-exit yes
+          set sftp:connect-program "ssh -a -x -o StrictHostKeyChecking=yes"
+          mirror --reverse --verbose \
+            --exclude-glob .git/ \
+            --exclude-glob .github/ \
+            --exclude-glob .gitignore \
+            --exclude-glob README.md \
+            ./ /portfolio/
+          bye
+          EOF
