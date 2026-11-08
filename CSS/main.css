@@ -1063,26 +1063,6 @@ h2 em {
   font-size: 16px;
   padding: 6px 10px;
 }
-.cv-download {
-  display: inline-flex;
-  align-items: center;
-  min-height: 49px;
-  padding: 10px 16px;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  background: var(--surface-raised);
-  color: var(--text);
-  font: inherit;
-  font-weight: 600;
-  line-height: 1.5;
-  cursor: not-allowed;
-  transition: transform .2s, box-shadow .2s;
-}
-.cv-download:hover {
-  color: var(--text);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px #0002;
-}
 .contact-section {
   padding-block: 88px 90px;
 }
