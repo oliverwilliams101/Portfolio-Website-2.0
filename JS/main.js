@@ -221,6 +221,9 @@ filters.addEventListener('click', (event) => {
 // Preserve the native details interaction as a fallback on older browsers.
 const dialog = document.querySelector('#project-dialog');
 const dialogContent = document.querySelector('#dialog-content');
+const dialogFooter = document.querySelector('.dialog-footer');
+const dialogGithubLink = document.querySelector('.dialog-footer a');
+const dialogGithubLabel = dialogGithubLink.querySelector('span');
 
 if (typeof dialog.showModal === 'function') {
   cards.forEach((card) => {
@@ -264,6 +267,9 @@ if (typeof dialog.showModal === 'function') {
       }
 
       const description = card.querySelector('.project-detail-content').cloneNode(true);
+      dialogFooter.hidden = !card.dataset.github;
+      dialogGithubLink.href = card.dataset.github || 'https://github.com/oliverwilliams101';
+      dialogGithubLabel.textContent = card.dataset.github ? 'View on GitHub' : 'Visit my GitHub';
       dialogContent.replaceChildren(title, visual, description);
       dialog.showModal();
       dialog.scrollTop = 0;

@@ -1160,9 +1160,13 @@ dialog::backdrop {
   box-shadow: none;
 }
 .dialog-footer {
+  justify-content: flex-start;
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 16px;
+}
+.dialog-footer[hidden] {
+  display: none;
 }
 @media (min-width: 1500px) {
   .hero {
